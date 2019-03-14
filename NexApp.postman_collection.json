@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "132c45d8-a8fe-438c-8a3c-4b6975f692b1",
+		"name": "NexApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Quotes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7f89614c-4b36-4b62-82ec-c6d0cea9c400",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:60837/stock/quotes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60837",
+					"path": [
+						"stock",
+						"quotes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USD Currency",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9c598a80-dd2a-4ae1-900a-9479ee4b676e",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:60837/stock/quotes/?currency=USD",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60837",
+					"path": [
+						"stock",
+						"quotes",
+						""
+					],
+					"query": [
+						{
+							"key": "currency",
+							"value": "USD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "> 10 MarketCap",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "675f434e-82b4-4eac-a56d-23e52de241fd",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:60837/stock/quotes/?marketCap=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60837",
+					"path": [
+						"stock",
+						"quotes",
+						""
+					],
+					"query": [
+						{
+							"key": "marketCap",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "> 0 DailyChange",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d3eb1a2-0b7a-4bcd-8fbb-2dd61e0696d2",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:60837/stock/quotes/?dailyChange=0.15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60837",
+					"path": [
+						"stock",
+						"quotes",
+						""
+					],
+					"query": [
+						{
+							"key": "dailyChange",
+							"value": "0.15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Many filters",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e7a5f1c5-1f6e-4dea-ab8a-674e47ee1c5f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:60837/stock/quotes/?currency=USD&dailyChange=0.15&marketCap=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "60837",
+					"path": [
+						"stock",
+						"quotes",
+						""
+					],
+					"query": [
+						{
+							"key": "currency",
+							"value": "USD"
+						},
+						{
+							"key": "dailyChange",
+							"value": "0.15"
+						},
+						{
+							"key": "marketCap",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
